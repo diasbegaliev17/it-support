@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; color: #222; }
+header { background: #1f4e79; color: #fff; padding: 14px 24px; display: flex; gap: 20px; align-items: center; }
+header a { color: #fff; text-decoration: none; font-weight: bold; }
+header .title { font-size: 20px; margin-right: auto; }
+main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+.card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #e3e6ea; vertical-align: top; }
+th { background: #eef2f6; }
+.btn { display: inline-block; padding: 8px 14px; background: #1f4e79; color: #fff; border: 0; border-radius: 5px; text-decoration: none; cursor: pointer; font-size: 14px; }
+.btn.danger { background: #b83232; }
+.btn.small { padding: 4px 9px; font-size: 13px; }
+.badge { display: inline-block; padding: 2px 9px; border-radius: 12px; font-size: 12px; background: #dbe7f3; }
+.badge.low { background: #fde0e0; color: #a11b1b; font-weight: bold; }
+.messages { list-style: none; padding: 0; }
+.messages li { background: #e3f4e6; padding: 10px 14px; border-radius: 6px; margin-bottom: 10px; }
+form p { margin: 0 0 14px; }
+form label { display: block; font-weight: bold; margin-bottom: 4px; }
+form input, form select, form textarea { width: 100%; padding: 8px; border: 1px solid #bbb; border-radius: 5px; font-size: 14px; }
+.errorlist { color: #b83232; list-style: none; padding: 0; margin: 4px 0; }
+.empty { color: #777; }

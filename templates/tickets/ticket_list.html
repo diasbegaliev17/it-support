@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Өтінімдер тізімі</h2>
+    {% if tickets %}
+    <table>
+        <tr><th>№</th><th>Тақырып</th><th>Басымдық</th><th>Мәртебе</th><th>Уақыты</th><th></th></tr>
+        {% for t in tickets %}
+        <tr>
+            <td>{{ t.pk }}</td>
+            <td><b>{{ t.title }}</b><br>{{ t.description|truncatechars:80 }}</td>
+            <td>{{ t.get_priority_display }}</td>
+            <td><span class="badge">{{ t.get_status_display }}</span></td>
+            <td>{{ t.created_at|date:"d.m.Y H:i" }}</td>
+            <td>
+                <a class="btn small" href="{% url 'ticket_update' t.pk %}">Өңдеу</a>
+                <a class="btn small danger" href="{% url 'ticket_delete' t.pk %}">Жою</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p class="empty">Әзірге өтінім жоқ.</p>
+    {% endif %}
+</div>
+{% endblock %}

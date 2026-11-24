@@ -1,0 +1,24 @@
+{% load static %}<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}IT-қолдау өтінімдері{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<header>
+    <span class="title">IT-қолдау өтінімдері</span>
+    <a href="{% url 'ticket_list' %}">Өтінімдер тізімі</a>
+    <a href="{% url 'ticket_create' %}">Жаңа өтінім</a>
+</header>
+<main>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}<li>{{ message }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>
